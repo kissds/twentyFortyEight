@@ -1,0 +1,11 @@
+<div class="row" *ngFor="let row of state$ | async; let rowIndex = index">
+  <div class="tile" *ngFor="let tile of row; let tileIndex = index" (click)="fill(rowIndex, tileIndex)">{{tile}}</div>
+</div>
+
+<div>
+  <button (click)="fillRandom()">Create random tile</button>
+  <button (click)="moveRight()">&rarr;</button>
+  <button (click)="moveLeft()">&larr;</button>
+  <button (click)="moveUp()">&uarr;</button>
+  <button (click)="moveDown()">&darr;</button>
+</div>
